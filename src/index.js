@@ -33,17 +33,27 @@ function toyCreator(toy){
 
   const toyImage = document.createElement('img')
   toyImage.src = toy.image
-  toyImage.classList = ('toy-avatar')
+  toyImage.classList = 'toy-avatar'
 
   const toyLikes = document.createElement('p')
-  toyLikes.textContent = toy.likes
-  toyLikes.
+  toyLikes.textContent = `${toy.likes} Likes`
+
+  const likeButton = document.createElement('button')
+  likeButton.textContent = 'Like'
+  likeButton.classList = 'button'
   
-    toyDiv.append(toyHeader)
-    toyDiv.append(toyImage)
-    toyDiv.append(toyLikes)
-      toyCollection.appendChild(toyDiv)
-  }
+  toyDiv.append(toyHeader)
+  toyDiv.append(toyImage)
+  toyDiv.append(toyLikes)
+  toyDiv.append(likeButton)
+
+  toyCollection.appendChild(toyDiv)
+}
+
+// function newToy(e){
+//   e.preventDefault()
+//   const [name, img] = e.target.value
+// }
 
 
 
